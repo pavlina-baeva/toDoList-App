@@ -1,0 +1,43 @@
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(1, 1, 249);
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding: 20px;
+}
+
+.to-do {
+    background-color:rgb(255, 255, 255);
+    border-radius:10px;
+    height:90vh;
+    width:95vw;
+}
+
+.to-do__title {
+    margin:12px;
+}
+
+.to-do__new {
+    display:flex;
+}
+
+.to-do__input {
+    border-radius:10px;
+    height:5vh;
+    width:60%;
+    padding:5px;
+    margin:1em;
+}
+
+.to-do__add-btn {
+    border-radius:10px;
+    background-color: rgb(1, 1, 249);
+    color:rgb(255, 255, 255);
+    padding:15px;
+    margin-left:0.5em;
+    margin:1em;
+}
+
+.to-do__list {
+}
