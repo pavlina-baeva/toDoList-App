@@ -3,12 +3,13 @@ const list = [];
 
 //add new task to the list
 function addTask (text, list) {
-    /*const timestamp = Date.now();
+    const timestamp = Date.now();
     const newTask = {
         id:timestamp,
         text,
         isComplete:false
     }
+    /*
     if (valudateInput) {
     list.push(newTask);
     }*/
