@@ -12,6 +12,7 @@ body {
     border-radius:10px;
     height:90vh;
     width:95vw;
+    padding:10px;
 }
 
 .to-do__title {
@@ -23,9 +24,11 @@ body {
 }
 
 .to-do__input {
+    font-family: inherit;
+    border: 1px solid rgb(165, 163, 163);
     border-radius:10px;
     height:5vh;
-    width:60%;
+    width:80%;
     padding:5px;
     margin:1em;
 }
@@ -40,4 +43,8 @@ body {
 }
 
 .to-do__list {
+}
+
+.to-do__error {
+    border: solid rgb(255, 0, 0);
 }
