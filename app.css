@@ -43,8 +43,15 @@ body {
 }
 
 .to-do__list {
+    display:flex;
+    flex-direction:column;
 }
 
-.to-do__error {
-    border: solid rgb(255, 0, 0);
+.error {
+    border: solid 2px red;
+}
+
+.errorMessage {
+    font-size: small;
+    color: red;
 }
