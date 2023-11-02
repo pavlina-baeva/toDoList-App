@@ -16,8 +16,19 @@ function addTask (text, list) {
     }*/
 }
 
+//скорее всего удалить
+function limitedClick() {
+    let limit = false;
+    return function () {
+    if (!limit) {
+        console.log('Функция выполнена');
+        limit = true;
+    }
+}
+}
+
 function createError(input, text) {
-    const parent = input.parentNode;
+    const parent = input.parentElement;
     const errorElement = document.createElement('label');
     errorElement.className = 'errorMessage';
     errorElement.textContent = text;
@@ -33,17 +44,17 @@ function removeError(input) {
     }
 }
 
-//check input for being full & not repeating previous task
+//check input for being full & not repeating previous tasks
 function validateTask (text, list) {
-    /*let 
     const taskText = task.value;
     if (taskText == '') {
         createError(task, 'Напишите задачу!');
+        return false;
     } else {
         removeError(task);
     }
 
-    list.forEach((newTask) => {
+    /*list.forEach((newTask) => {
         if (newTask.text == text) {
             alert('Такая задача уже существует');
 
@@ -54,8 +65,10 @@ function validateTask (text, list) {
 
 function renderTaskList(list) {
     list.forEach(task => {
+        let listHTML ='';
+        //const cls = newTask.isComplete ? ;
         const taskHTML = `
-        <div id='${newTask.id}' class='${}'>
+        <div id='${newTask.id}' class='${cls}'>
         <input type="checkbox" ${checked}><div class = "to-do__checkbox-div"></div>
         <div class="to-do__taskText">${task.text}</div>
         <button class="to-do__deleteBtn">Удалить</button>

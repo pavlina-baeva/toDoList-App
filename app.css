@@ -54,4 +54,5 @@ body {
 .errorMessage {
     font-size: small;
     color: red;
+    margin:1em;
 }
