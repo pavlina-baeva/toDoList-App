@@ -1,4 +1,5 @@
 const task = document.querySelector('.to-do__input');
+const errorMessage = document.querySelector('.errorMessage');
 const taskList = [];
 
 //add new task to the list
@@ -16,33 +17,20 @@ function addTask (text, list) {
     }*/
 }
 
-//скорее всего удалить
-function limitedClick() {
-    let limit = false;
-    return function () {
-    if (!limit) {
-        console.log('Функция выполнена');
-        limit = true;
-    }
-}
-}
-
+//error functions for input-validation
 function createError(input, text) {
-    const parent = input.parentElement;
-    const errorElement = document.createElement('label');
-    errorElement.className = 'errorMessage';
-    errorElement.textContent = text;
     input.classList.add('error');
-    parent.append(errorElement);
+    errorMessage.innerText = text;
+    
 }
 
 function removeError(input) {
-    const parent = input.parentNode;
     if (input.classList.contains('error')) {
-        parent.querySelector('.errorMessage').remove();
+        errorMessage.innerText='';
         input.classList.remove('error');
     }
 }
+
 
 //check input for being full & not repeating previous tasks
 function validateTask (text, list) {
