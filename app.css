@@ -21,6 +21,14 @@ body {
 
 .to-do__new {
     display:flex;
+    width:100%;
+
+}
+
+.to-do__add {
+    display:flex;
+    flex-direction: column;
+    width:75%;
 }
 
 .to-do__input {
@@ -28,18 +36,18 @@ body {
     border: 1px solid rgb(165, 163, 163);
     border-radius:10px;
     height:5vh;
-    width:80%;
     padding:5px;
-    margin:1em;
+    margin:1em 0.5em 0.5em 1em;
 }
 
 .to-do__add-btn {
-    border-radius:10px;
     background-color: rgb(1, 1, 249);
     color:rgb(255, 255, 255);
+    border-radius:10px;
     padding:15px;
-    margin-left:0.5em;
-    margin:1em;
+    margin: 1em 1em 1em 0.5em;
+    width:fit-content;
+    height:fit-content;
 }
 
 .to-do__list {
@@ -54,5 +62,5 @@ body {
 .errorMessage {
     font-size: small;
     color: red;
-    margin:1em;
+    margin:0.5em 0 0 1em;
 }
